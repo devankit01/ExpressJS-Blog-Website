@@ -1,0 +1,36 @@
+<%- include("header"); -%>
+
+    <div class="container">
+        <br />
+
+
+
+        <h2 class="card-title">
+            <%= article.title %>
+        </h2>
+        <h5 class="card-subtitle text-muted">By <%= article.author %> on <%= article.createdAt.toDateString() %>
+        </h5>
+        <br>
+
+
+        <img src="<%= article.image %>" alt="" width="100%" height="auto" />
+        <br>
+        <br>
+        <h5>
+            <%= article.body %>
+        </h5>
+        <br/>
+        <% if (user.name == article.author)  { %>
+        <a href="/articles/edit/<%= article._id %>" type="button" class="btn btn-light">Update </a>
+        <a href="/articles/delete/<%= article._id %>" type="button" class="btn btn-light">Delete </a>
+        <% } %>
+        <br>
+        <br>
+        <h3><a href="/" class="">&larr; Back To Home</a></h3>
+
+
+
+
+    </div>
+    <!-- <%- include("footer"); -%> -->
+    </div>

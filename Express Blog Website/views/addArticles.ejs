@@ -1,0 +1,37 @@
+<%- include("header"); -%>
+
+<div class="container">
+        <br />
+        <h2>Add Blog</h2>
+        <br>
+
+        <div class="row">
+                <form action="/articles/add" method="post" class="form-group row" autocomplete="off">
+                        <div class="form-group">
+                                <label class="form-label mt-4">Article Image</label>
+                                <input type="url" class="form-control" name="image">
+                        </div>
+                        <div class="form-group">
+                                <label class="form-label mt-4">Article Title</label>
+                                <input type="text" class="form-control" name="title">
+                        </div>
+                        <!-- <div class="form-group">
+                                <label class="form-label mt-4">Article Author</label>
+                                <input type="text" class="form-control" name="author">
+                        </div> -->
+                        <div class="form-group">
+                                <label class="form-label mt-4">Article Body</label>
+                                <textarea name="body" class="form-control"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                                <br>
+                                <button type="submit" class="btn btn-primary">Add Article</button>
+                        </div>
+                        
+
+                </form>
+        </div>
+</div>
+<!-- <%- include("footer"); -%> -->
+</div>
